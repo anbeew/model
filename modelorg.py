@@ -4,11 +4,11 @@ import os
 import cv2
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras import layers
-from tensorflow.keras.models import Sequential, save_model, load_model
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.python.ops.gen_dataset_ops import model_dataset
-from tensorflow.python.ops.variables import model_variables
+from tf.keras import layers
+from tf.keras.models import Sequential, save_model, load_model
+from tf.keras.preprocessing.image import ImageDataGenerator
+from tf.python.ops.gen_dataset_ops import model_dataset
+from tf.python.ops.variables import model_variables
 
 directory=r'C:\datasets\orange'
 categories=['fresh','rotten']
@@ -62,10 +62,6 @@ pickle_out.close()
 pickle_out=open('y.pickle','wb')
 pickle.dump(y,pickle_out)
 pickle_out.close()
-
-#X[1]
-
-#y[1]
 
 pickle_in=open('X.pickle', 'rb')
 X= pickle.load(pickle_in)
